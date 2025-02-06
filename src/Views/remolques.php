@@ -159,11 +159,11 @@
             contentType: false,
             processData: false,
             success: function (respuesta) {
-                if (respuesta.match(/Correctamente.*/)) {
+                if (respuesta.match(/Ok.*/)) {
 
                     Toast.fire({
                         icon: 'success',
-                        title: "Guardado Correctamente"
+                        title: respuesta
                     });
 
                     tableRemolques.ajax.reload();
@@ -220,12 +220,13 @@
             success: function (respuesta) {
                 $("#idRemolques").val(respuesta["id"]);
 
-                $("#idEmpresa").val(respuesta["idEmpresa"]);
-                $("#idEmpresa").trigger("change");
-                $("#descripcion").val(respuesta["descripcion"]);
+               
+                $("#descripcionRemolque").val(respuesta["descripcion"]);
                 $("#subTipoRemolque").val(respuesta["subTipoRemolque"]);
                 $("#subTipoRemolque").trigger("change");
                 $("#placa").val(respuesta["placa"]);
+                $("#idEmpresaRemolque").val(respuesta["idEmpresa"]);
+                $("#idEmpresaRemolque").trigger("change");
 
 
             }

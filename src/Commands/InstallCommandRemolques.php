@@ -72,7 +72,7 @@ class InstallCommandRemolques extends BaseCommand
             $this->call('migrate');
             // then seed data
             $seeder = Database::seeder();
-            $seeder->call('julio101290\boilerplatelocations\Database\Seeds\BoilerplateRemolques');
+            $seeder->call('julio101290\boilerplateremolques\Database\Seeds\BoilerplateRemolques');
         } catch (\Exception $e) {
             $this->showError($e);
         }

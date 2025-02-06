@@ -100,7 +100,7 @@ class RemolquesController extends BaseController {
                 $dateLog["description"] = lang("vehicles.logDescription") . json_encode($datos);
                 $dateLog["user"] = $userName;
                 $this->log->save($dateLog);
-                echo lang("remolques.msg.msg_save_fail");
+                echo "Ok ". lang("remolques.msg.msg_save_success");
             } catch (\PHPUnit\Framework\Exception $ex) {
                 echo lang("remolques.msg.msg_save_success") . $ex->getMessage();
             }
@@ -115,7 +115,7 @@ class RemolquesController extends BaseController {
                 $dateLog["description"] = lang("remolques.logUpdated") . json_encode($datos);
                 $dateLog["user"] = $userName;
                 $this->log->save($dateLog);
-                echo lang("remolques.msg.msg_update_success");
+                echo "Ok ".lang("remolques.msg.msg_update_success");
                 return;
             }
         }
