@@ -1,32 +1,33 @@
 <?php
 
-$remolques["logDescription"] = "El registro en remolques fue guardado con los siguientes datos:";
-$remolques["logUpdate"] = "El registro en remolques fue actualizado con los siguientes datos:";
-$remolques["logDeleted"] = "El registro en remolques fue eliminado con los siguientes datos:";
-$remolques["msg_delete"] = "El Registro en remolques fue eliminado correctamente:";
-$remolques["add"] = "Agregar Remolques";
-$remolques["edit"] = "Editar remolques";
-$remolques["createEdit"] = "Crear / Editar";
-$remolques["title"] = "Admon. remolques";
-$remolques["subtitle"] = "Lista remolques";
-$remolques["fields"]["idEmpresa"] = "Empresa";
-$remolques["fields"]["descripcion"] = "Descripcion";
-$remolques["fields"]["subTipoRemolque"] = "SubTipo Remolque";
-$remolques["fields"]["placa"] = "Placa";
-$remolques["fields"]["updated_at"] = "Updated_at";
-$remolques["fields"]["deleted_at"] = "Deleted_at";
-$remolques["fields"]["created_at"] = "Created_at";
+$remolques["logDescription"] = "The trailer record was saved with the following data:";
+$remolques["logUpdate"] = "The trailer record was updated with the following data:";
+$remolques["logDeleted"] = "The trailer record was deleted with the following data:";
+$remolques["msg_delete"] = "The trailer record was successfully deleted:";
+$remolques["add"] = "Add Trailers";
+$remolques["edit"] = "Edit trailers";
+$remolques["createEdit"] = "Create / Edit";
+$remolques["title"] = "Trailer Management";
+$remolques["subtitle"] = "Trailer List";
 
-$remolques["fields"]["actions"] = "Acciones";
-$remolques["msg"]["msg_insert"] = "Registro agregado correctamente.";
-$remolques["msg"]["msg_update"] = "Registro modificado correctamente.";
-$remolques["msg"]["msg_delete"] = "Registro eliminado correctamente.";
-$remolques["msg"]["msg_get"] = "Registro obtenido correctamente.";
-$remolques["msg"]["msg_get_fail"] = "Registro no encontrado o eliminado.";
+$remolques["fields"]["idEmpresa"] = "Company";
+$remolques["fields"]["descripcion"] = "Description";
+$remolques["fields"]["subTipoRemolque"] = "Trailer Subtype";
+$remolques["fields"]["placa"] = "Plate";
+$remolques["fields"]["updated_at"] = "Updated at";
+$remolques["fields"]["deleted_at"] = "Deleted at";
+$remolques["fields"]["created_at"] = "Created at";
+$remolques["fields"]["actions"] = "Actions";
 
-$remolques["msg"]["msg_save_fail"] = "Error al guardar";
-$remolques["msg"]["msg_save_success"] = "Guardado Correctamente";
-$remolques["msg"]["msg_update_success"] = "Actualizado Correctamente";
-$remolques["withOutRemolque"] = "Sin Remolque";
+$remolques["msg"]["msg_insert"] = "Record added successfully.";
+$remolques["msg"]["msg_update"] = "Record updated successfully.";
+$remolques["msg"]["msg_delete"] = "Record deleted successfully.";
+$remolques["msg"]["msg_get"] = "Record retrieved successfully.";
+$remolques["msg"]["msg_get_fail"] = "Record not found or deleted.";
+
+$remolques["msg"]["msg_save_fail"] = "Error saving";
+$remolques["msg"]["msg_save_success"] = "Saved Successfully";
+$remolques["msg"]["msg_update_success"] = "Updated Successfully";
+$remolques["withOutRemolque"] = "Without Trailer";
 
 return $remolques;

@@ -1,32 +1,33 @@
 <?php
 
-$remolques["logDescription"] = "El registro en remolques fue guardado con los siguientes datos:";
-$remolques["logUpdate"] = "El registro en remolques fue actualizado con los siguientes datos:";
-$remolques["logDeleted"] = "El registro en remolques fue eliminado con los siguientes datos:";
-$remolques["msg_delete"] = "El Registro en remolques fue eliminado correctamente:";
-$remolques["add"] = "Agregar Remolques";
-$remolques["edit"] = "Editar remolques";
-$remolques["createEdit"] = "Crear / Editar";
-$remolques["title"] = "Admon. remolques";
-$remolques["subtitle"] = "Lista remolques";
-$remolques["fields"]["idEmpresa"] = "Empresa";
-$remolques["fields"]["descripcion"] = "Descripcion";
-$remolques["fields"]["subTipoRemolque"] = "SubTipo Remolque";
-$remolques["fields"]["placa"] = "Placa";
-$remolques["fields"]["updated_at"] = "Updated_at";
-$remolques["fields"]["deleted_at"] = "Deleted_at";
-$remolques["fields"]["created_at"] = "Created_at";
+$remolques["logDescription"] = "La antaŭfilmo-registro estis konservita kun la sekvaj datumoj:";
+$remolques["logUpdate"] = "La antaŭfilmo-registro estis ĝisdatigita kun la sekvaj datumoj:";
+$remolques["logDeleted"] = "La antaŭfilmo-registro estis forigita kun la sekvaj datumoj:";
+$remolques["msg_delete"] = "La antaŭfilmo-registro estis sukcese forigita:";
+$remolques["add"] = "Aldoni Antaŭfilmojn";
+$remolques["edit"] = "Redakti antaŭfilmojn";
+$remolques["createEdit"] = "Krei / Redakti";
+$remolques["title"] = "Antaŭfilmo-Administrado";
+$remolques["subtitle"] = "Antaŭfilmo-Listo";
 
-$remolques["fields"]["actions"] = "Acciones";
-$remolques["msg"]["msg_insert"] = "Registro agregado correctamente.";
-$remolques["msg"]["msg_update"] = "Registro modificado correctamente.";
-$remolques["msg"]["msg_delete"] = "Registro eliminado correctamente.";
-$remolques["msg"]["msg_get"] = "Registro obtenido correctamente.";
-$remolques["msg"]["msg_get_fail"] = "Registro no encontrado o eliminado.";
+$remolques["fields"]["idEmpresa"] = "Firmao";
+$remolques["fields"]["descripcion"] = "Priskribo";
+$remolques["fields"]["subTipoRemolque"] = "Antaŭfilmo-Subtipo";
+$remolques["fields"]["placa"] = "Numerplato";
+$remolques["fields"]["updated_at"] = "Ĝisdatigita je";
+$remolques["fields"]["deleted_at"] = "Forigita je";
+$remolques["fields"]["created_at"] = "Kreita je";
+$remolques["fields"]["actions"] = "Agoj";
 
-$remolques["msg"]["msg_save_fail"] = "Error al guardar";
-$remolques["msg"]["msg_save_success"] = "Guardado Correctamente";
-$remolques["msg"]["msg_update_success"] = "Actualizado Correctamente";
-$remolques["withOutRemolque"] = "Sin Remolque";
+$remolques["msg"]["msg_insert"] = "Registro sukcese aldonita.";
+$remolques["msg"]["msg_update"] = "Registro sukcese ĝisdatigita.";
+$remolques["msg"]["msg_delete"] = "Registro sukcese forigita.";
+$remolques["msg"]["msg_get"] = "Registro sukcese akirita.";
+$remolques["msg"]["msg_get_fail"] = "Registro ne trovita aŭ forigita.";
+
+$remolques["msg"]["msg_save_fail"] = "Eraro dum konservado";
+$remolques["msg"]["msg_save_success"] = "Sukcese Konservita";
+$remolques["msg"]["msg_update_success"] = "Sukcese Ĝisdatigita";
+$remolques["withOutRemolque"] = "Sen Antaŭfilmo";
 
 return $remolques;
