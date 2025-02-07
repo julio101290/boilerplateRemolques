@@ -1,11 +1,11 @@
-[![Latest Stable Version](https://poser.okvpn.org/julio101290/boilerplatecomplementopago/v/stable)](https://packagist.org/packages/julio101290/boilerplatecomplementopago) [![Total Downloads](https://poser.okvpn.org/julio101290/boilerplatecomplementopago/downloads)](https://packagist.org/packages/julio101290/boilerplatecomplementopago) [![Latest Unstable Version](https://poser.okvpn.org/julio101290/boilerplatecomplementopago/v/unstable)](https://packagist.org/packages/julio101290/boilerplatecomplementopago) [![License](https://poser.okvpn.org/julio101290/boilerplatecomplementopago/license)](https://packagist.org/packages/julio101290/boilerplatecomplementopago)
+[![Latest Stable Version](https://poser.okvpn.org/julio101290/boilerplateremolques/v/stable)](https://packagist.org/packages/julio101290/boilerplateremolques) [![Total Downloads](https://poser.okvpn.org/julio101290/boilerplateremolques/downloads)](https://packagist.org/packages/julio101290/boilerplateremolques) [![Latest Unstable Version](https://poser.okvpn.org/julio101290/boilerplateremolques/v/unstable)](https://packagist.org/packages/julio101290/boilerplateremolques) [![License](https://poser.okvpn.org/julio101290/boilerplateremolques/license)](https://packagist.org/packages/julio101290/boilerplateremolques)
 
 ![image](https://github.com/user-attachments/assets/3aa98f16-c7e2-460c-8fda-f538cdb34aab)
 
 
 
-## CodeIgniter 4 Boilerplate Payment Complement
-library to generate payment complement CFDI 4.0
+## CodeIgniter 4 Boilerplate Remolques
+library CRUD Trailers Remolques complement CFDI 4.0
 
 ## Requirements
 * PhpCfdi\SatCatalogos
@@ -34,7 +34,7 @@ library to generate payment complement CFDI 4.0
 
  	composer require julio101290/boilerplatesells
 
-  	composer require julio101290/boilerplatecomplementopago
+  	composer require julio101290/boilerplateremolques
 
 
 ### Run command for migration and seeder
@@ -53,7 +53,8 @@ library to generate payment complement CFDI 4.0
 
 	php spark boilerplatequotes:installsells
 
- 	php spark boilerplatecomplementopago:installcomplementopago
+ 	php spark boilerplateremolques:installremolques
+
 	
 
 # Make the Menu, Example
