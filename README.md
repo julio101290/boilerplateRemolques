@@ -58,15 +58,12 @@ library CRUD Trailers Remolques complement CFDI 4.0
 	
 
 # Make the Menu, Example
-![image](https://github.com/user-attachments/assets/e8922b6f-6afe-49b4-ad37-5eb82665c179)
+![image](https://github.com/user-attachments/assets/efdaae1f-fd99-4cd6-9031-142328b6ec6e)
+
 
 
 
 # Ready
-
-![image](https://github.com/user-attachments/assets/f059a131-b411-4855-971a-86098ac5af5f)
-
-![image](https://github.com/user-attachments/assets/1497254f-16ad-4c42-b118-ee1f27df5bad)
 
 
 
