@@ -46,9 +46,35 @@ class RemolquesController extends BaseController {
 
 
         if ($this->request->isAJAX()) {
-            $datos = $this->remolques->mdlGetRemolques($empresasID);
+            $request = service('request');
+            $draw = $request->getGet('draw');
+            $start = $request->getGet('start');
+            $length = $request->getGet('length');
+            $search = $request->getGet('search')['value'] ?? '';
+            $order = $request->getGet('order');
+            $columns = $request->getGet('columns');
 
-            return \Hermawan\DataTables\DataTable::of($datos)->toJson(true);
+            $orderColumnIndex = $order[0]['column'] ?? 0;
+            $orderColumn = $columns[$orderColumnIndex]['data'] ?? 'a.id';
+            $orderDir = $order[0]['dir'] ?? 'asc';
+
+            $empresasID = [1, 2, 3]; // <- Aquí pones tus IDs reales o sacas de sesión
+
+            $resultado = $this->remolques->mdlGetRemolquesServerSide(
+                    $empresasID,
+                    $search,
+                    $orderColumn,
+                    $orderDir,
+                    $start,
+                    $length
+            );
+
+            return $this->response->setJSON([
+                        'draw' => intval($draw),
+                        'recordsTotal' => $resultado['total'],
+                        'recordsFiltered' => $resultado['filtered'],
+                        'data' => $resultado['data']
+            ]);
         }
         $titulos["title"] = lang('remolques.title');
         $titulos["subtitle"] = lang('remolques.subtitle');
@@ -100,7 +126,7 @@ class RemolquesController extends BaseController {
                 $dateLog["description"] = lang("vehicles.logDescription") . json_encode($datos);
                 $dateLog["user"] = $userName;
                 $this->log->save($dateLog);
-                echo "Ok ". lang("remolques.msg.msg_save_success");
+                echo "Ok " . lang("remolques.msg.msg_save_success");
             } catch (\PHPUnit\Framework\Exception $ex) {
                 echo lang("remolques.msg.msg_save_success") . $ex->getMessage();
             }
@@ -115,7 +141,7 @@ class RemolquesController extends BaseController {
                 $dateLog["description"] = lang("remolques.logUpdated") . json_encode($datos);
                 $dateLog["user"] = $userName;
                 $this->log->save($dateLog);
-                echo "Ok ".lang("remolques.msg.msg_update_success");
+                echo "Ok " . lang("remolques.msg.msg_update_success");
                 return;
             }
         }
@@ -173,11 +199,11 @@ class RemolquesController extends BaseController {
                         ->where("idEmpresa", $idEmpresa, FALSE)
                         ->like("descripcion", $searchTerm)->findAll();
         $data = array();
-        
+
         $data[] = array(
-                "id" =>"0",
-                "text" => "0 ".lang("remolques.withOutRemolque"),
-            );
+            "id" => "0",
+            "text" => "0 " . lang("remolques.withOutRemolque"),
+        );
 
         foreach ($listRemolques as $remolques) {
             $data[] = array(
@@ -190,5 +216,4 @@ class RemolquesController extends BaseController {
 
         return $this->response->setJSON($response);
     }
-
 }
