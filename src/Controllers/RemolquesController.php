@@ -194,10 +194,15 @@ class RemolquesController extends BaseController {
             $searchTerm = $postData['searchTerm'];
         }
 
+        $db = \Config\Database::connect();
+        $searchTerm = strtolower($db->escapeLikeString($searchTerm));
+
         $listRemolques = $this->remolques
-                        ->select("id,descripcion")
-                        ->where("idEmpresa", $idEmpresa, FALSE)
-                        ->like("descripcion", $searchTerm)->findAll();
+                ->select('id, descripcion')
+                ->where('"idEmpresa"', $idEmpresa) // usar comillas si la columna es "idEmpresa"
+                ->where('LOWER(descripcion) LIKE', "%{$searchTerm}%") // LIKE case-insensitive
+                ->findAll();
+        
         $data = array();
 
         $data[] = array(
