@@ -175,6 +175,10 @@ class RemolquesController extends BaseController {
         $request = service('request');
         $postData = $request->getPost();
 
+        $db = \Config\Database::connect(); // Obtener la conexión por defecto
+        $driver = $db->DBDriver;
+        $quote = $driver === 'Postgre' ? '"' : '';
+
         $response = array();
 
         // Read new token and assign in $response['token']
@@ -199,10 +203,10 @@ class RemolquesController extends BaseController {
 
         $listRemolques = $this->remolques
                 ->select('id, descripcion')
-                ->where('"idEmpresa"', $idEmpresa) // usar comillas si la columna es "idEmpresa"
+                ->where($quote.'idEmpresa'.$quote, $idEmpresa) // usar comillas si la columna es "idEmpresa"
                 ->where('LOWER(descripcion) LIKE', "%{$searchTerm}%") // LIKE case-insensitive
                 ->findAll();
-        
+
         $data = array();
 
         $data[] = array(
